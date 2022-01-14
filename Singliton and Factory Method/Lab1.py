@@ -20,7 +20,7 @@ class Teacher(IPerson):
 		self.name = "Basic Teacher Name"
 
 	def person_method(self):
-		print("I am a teacher")
+		print("You can start work like a Teacher, but first login ===>")
 
 class PersonFactory:
 
@@ -38,6 +38,8 @@ if __name__ == "__main__":
 	person = PersonFactory.build_person(choice)
 	person.person_method()
 
+
+#############################################################################
 
 class IPerson(metaclass=ABCMeta):
 	def get_data():
@@ -70,7 +72,9 @@ if __name__ == "__main__":
 	print("------------------------------------------")
 	status = input("Login with your status Teacher/Student :\n")
 	name = input("Name: \n")
-	password = int(input("Password\n"))
+	password = int(input("Password: \n"))
 	Auntification = PersonSingleton(status, name, password)
 	Auntification.print_data()
+
+
 
